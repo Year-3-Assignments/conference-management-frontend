@@ -1,0 +1,39 @@
+.role-request-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.role-request-info-container {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.role-request-info {
+  display: inline-table;
+  color: #000000;
+}
+
+.role-request-title {
+  font-weight: 600;
+}
+
+.role-request-field {
+  margin-left: 8px;
+}
+
+.request-role {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.approve {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reject {
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}

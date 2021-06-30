@@ -1,0 +1,34 @@
+.notification-icon {
+  color: #ffffff
+}
+
+.navbar-bg {
+  background: #254e58;
+}
+
+.nav-link {
+  font-family: 'Roboto';
+}
+
+.navbar-title {
+  font-size: 20px;
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+  .nav-content {
+    margin-left: 150px;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1400px) {
+  .nav-content {
+    margin-left: 520px;
+  }
+};

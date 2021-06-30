@@ -1,0 +1,106 @@
+.admin-profile-img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+}
+
+.admin-info-container {
+  display: block;
+}
+
+.admin-info {
+  display: inline-table;
+  color: #000000;
+}
+
+.admin-username {
+  font-size: 20px;
+}
+
+.admin-data {
+  font-weight: lighter;
+  font-size: 18px
+}
+
+@media (min-width: 300px) {
+  .admin-name {
+    margin-left: 20px;
+    font-weight: lighter;
+  }
+}
+
+@media (min-width: 576px) {
+  .admin-name {
+    margin-left: 20px;
+    font-weight: lighter;
+  }
+};
+
+@media (min-width: 768px) {
+  .admin-name {
+    margin-left: 20px;
+    font-weight: lighter;
+  }
+};
+
+@media (min-width: 992px) {
+  .admin-name {
+    margin-left: 0px;
+    margin-top: 10px;
+    font-weight: lighter;
+  }
+};
+
+@media (min-width: 1200px) {
+  .admin-name {
+    margin-left: 20px;
+    font-weight: lighter;
+  }
+};
+
+@media (min-width: 1400px) {
+  .admin-name {
+    margin-left: 20px;
+    font-weight: lighter;
+  }
+};
+
+.summary-body {
+  color: #000000;
+}
+
+.summary-data {
+  margin-left: 10px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.summary-item {
+  font-size: 38px;
+  margin-top: 10px;
+}
+
+.summary-header {
+  font-weight: 700;
+}
+
+.name {
+  font-weight: 600;
+  color: #000000;
+}
+
+.payment-title {
+  color: #000000;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.payment-profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.admin-contact {
+  font-size: 19px;
+}

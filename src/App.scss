@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Product Sans";
+  src: url('https://fonts.gstatic.com/s/productsans/v7/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2') format('woff2')
+}
+
+body {
+  background-color: #f8f8f8;
+  font-family: 'Product Sans',-apple-system,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol';
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 94vh;
+  margin-top: 60px;
+}
+
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.btn--pill {
+  border-radius: 80px;
+}
+
+.form-text {
+  font-size: 16px;
+}
+
+.validation-text {
+  font-size: 13px;
+}
+
+.card {
+  border-radius: 0px;
+}
+
+.btn-color {
+  background-color: #116466;
+  color: #fff;
+  font-size: 13px;
+}
+
+.btn-color:hover {
+  color: #fff;
+}
+
+.react-datepicker__input-container {
+  width: inherit;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.notification {
+  font-size: 15px;
+}
+
+.thumb-img {
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.created-person-img {
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  border-radius: 25px;
+  object-fit: cover
+}
+
+.react-bootstrap-table table {
+  table-layout: auto;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.page-item.active .page-link {
+  background-color: #116466;
+  border-radius: 8px;
+}
+
+.btn-secondary {
+  background-color: #116466;
+}
+
+.btn-secondary:hover {
+  background-color: #167c7e;
+}
+
+.btn-secondary::after {
+  background-color: #167c7e;
+}
+
+@media (min-width: 576px) {};
+
+@media (min-width: 768px) {};
+
+@media (min-width: 992px) {};
+
+@media (min-width: 1200px) {};
+
+@media (min-width: 1400px) {};

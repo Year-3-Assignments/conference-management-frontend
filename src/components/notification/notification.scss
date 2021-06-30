@@ -1,0 +1,55 @@
+.notification-info-container {
+  display: block;
+  background-color: #e4e2e2;
+}
+
+.notification-info {
+  display: inline-table;
+  background-color: #e4e2e2;
+}
+
+.notification-info::before {
+  content: none;
+}
+
+.notification-user-name {
+  margin-left: 30px;
+}
+
+.notification-profile-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.notification-img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.message {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000;
+}
+
+.bg-custom-light {
+  background: #c0d1f5;
+}
+
+.notification-title {
+  font-weight: 600;
+  color: #000;
+}
+
+.resource-title {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000
+}
+
+.hr {
+  width: 98%;
+  margin-left: 10px;
+}
