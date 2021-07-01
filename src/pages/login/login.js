@@ -37,6 +37,10 @@ class Login extends React.Component{
           window.location = '/admin/dashboard';
         } else if (localStorage.getItem('role') === 'ROLE_USER') {
           window.location = '/me'
+        } else if (localStorage.getItem('role') === 'ROLE_EDITOR') {
+          window.location = '/editor'
+        } else if (localStorage.getItem('role') === 'ROLE_REVIEWER') {
+          window.location = '/reviewer'
         }
       } else {
         NotificationManager.error('Error with login');

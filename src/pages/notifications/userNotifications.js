@@ -25,6 +25,11 @@ class UserNotifications extends Component {
       this.props.getUserNotifications();
       NotificationManager.success('Notifications update successfully');
     }
+
+    if (this.props.paidresource !== nextProps.paidresource) {
+      this.props.getUserNotifications();
+      NotificationManager.success('Payment successful');
+    }
   }
 
   render() {
@@ -54,7 +59,8 @@ class UserNotifications extends Component {
 
 const mapStateToProps = state =>({
   notifications: state.userReducer.usernotifications,
-  makenotificationarchive: state.userReducer.makenotificationarchive
+  makenotificationarchive: state.userReducer.makenotificationarchive,
+  paidresource: state.resourceReducer.paidResource
 });
 
 const mapDispatchToProps = dispatch =>({

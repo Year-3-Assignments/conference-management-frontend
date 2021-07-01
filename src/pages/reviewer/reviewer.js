@@ -161,8 +161,8 @@ class Reviewer extends Component {
   render() {
     return (
       <div className="container">    
-        <h4 className="mt-3">Resources</h4>
-        <div className="card p-4">
+        <div className="card p-4 mt-4">
+          <h4 className="reviewer-header">Resources Review</h4>
           <BootstrapTable 
             keyField='_id' 
             data={ this.state.resources } 
@@ -213,7 +213,7 @@ class Reviewer extends Component {
                 <button type="button" className="btn btn-light btn--pill" data-mdb-dismiss="modal">
                   Close
                 </button>
-                <button type="button" className="btn btn-primary btn--pill" onClick={this.onSubmit}>submit</button>
+                <button type="button" className="btn btn-primary btn--pill"  onClick={this.onSubmit}>submit</button>
               </div>
             </div>
           </div>
