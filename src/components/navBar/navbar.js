@@ -195,24 +195,8 @@ class Navbar extends React.Component {
 
             {localStorage.length === 0 ? 
               <div>
-                <a
-                  className="dropdown-toggle d-flex align-items-center hidden-arrow"
-                  href="#"
-                  id="dropDown"
-                  role="button"
-                  data-mdb-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  <i className="fas fa-caret-down fa-lg" style={{color: '#fff'}}></i>
-                </a>
-                <ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropDown">
-                  <li>
-                    <a className="dropdown-item" href="/signup">Create Account</a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="/login">Login</a>
-                  </li>
-                </ul>
+                <a href="/signup" className="btn btn-sm btn-outline-warning btn--pill">Sign up</a>&nbsp;&nbsp;&nbsp;
+                <a href="/login" className="btn btn-sm btn-outline-light btn--pill">Login</a>
               </div>
             :
               null
