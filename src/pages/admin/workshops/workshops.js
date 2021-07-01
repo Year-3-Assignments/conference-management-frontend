@@ -22,10 +22,10 @@ class Workshops extends Component {
   }
 
   componentWillReceiveProps = nextProps => {
-    if (this.props.allWorkshops !== nextProps.allWorkshops) {
-      this.setState({ workshops: nextProps.allWorkshops }, () => {
-        console.log(this.state.workshops)
-      });
+    if (nextProps.workshops !== null) {
+      if (this.props.workshops !== nextProps.workshops) {
+        this.setState({ workshops: nextProps.workshops });
+      }
     }
 
     if (this.props.changeworkshopstatus !== nextProps.changeworkshopstatus) {
@@ -67,7 +67,11 @@ class Workshops extends Component {
   buttonFormatter(cell, row, rowIndex) {
     return (
       <div>
-        <button className="btn btn-sm btn-success btn--pill" onClick={e => this.onApproveButtonClick(e, row)}>APPROVE</button>
+        {!row.isapproved ?
+          <button className="btn btn-sm btn-success btn--pill" onClick={e => this.onApproveButtonClick(e, row)}>APPROVE</button>
+        : 
+          <p className="badge rounded-pill user-badge bg-success text-dark">APPROVED</p>
+        }
       </div>
     );
   }
@@ -142,29 +146,28 @@ class Workshops extends Component {
       <div className="container p-4">
         <div className="card p-3">
           <h3 className="workshop-title">Workshops</h3>
-          {this.state.workshops && this.state.workshops.length > 0 ?
             <ToolkitProvider
-            keyField="_id"
-            data={this.state.workshops}
-            columns={this.tableColumnData}
-            search
-          >
-            {props => (
-              <div>
-                <SearchBar { ...props.searchProps } placeholder="Search users by name" className="mb-3" />
-                <BootstrapTable 
-                  { ...props.baseProps } 
-                  pagination={ paginationFactory() }
-                  bordered={false}
-                  striped={true}
-                  hover={true}
-                  headerClasses="header-class"
-                  wrapperClasses="table-responsive"
-                />
-              </div>
-            )}
-          </ToolkitProvider>
-          : null}
+              keyField="_id"
+              data={this.state.workshops}
+              columns={this.tableColumnData}
+              search
+            >
+              {props => (
+                <div>
+                  <SearchBar { ...props.searchProps } placeholder="Search users by name" className="mb-3" />
+                  <BootstrapTable 
+                    { ...props.baseProps } 
+                    pagination={ paginationFactory() }
+                    bordered={false}
+                    striped={true}
+                    hover={true}
+                    expandRow={this.expandRow}
+                    headerClasses="header-class"
+                    wrapperClasses="table-responsive"
+                  />
+                </div>
+              )}
+            </ToolkitProvider>
         </div>
       </div>
     );
@@ -172,7 +175,7 @@ class Workshops extends Component {
 }
 
 const mapStateToProps = state =>({
-  allWorkshops: state.workshopReducer.allWorkshops,
+  workshops: state.workshopReducer.allWorkshops,
   changeworkshopstatus: state.workshopReducer.changeworkshopstatus
 });
 

@@ -43,7 +43,7 @@ function workshopReducer(state = initialState,action){
       createWorkshop = action.payload.data;
       return{...state, loading: false, createWorkshop};
     case  `${GET_ALL_WORKSHOPS}_FULFILLED`:
-      allWorkshops = action.payload.data.data;
+      allWorkshops = action.payload.data;
       return{...state, loading:false, allWorkshops};
     case  `${SET_WORKSHOP}`:
       setWorkshop = action.payload;

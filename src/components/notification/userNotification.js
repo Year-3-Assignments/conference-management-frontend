@@ -45,7 +45,6 @@ class UserNotification extends Component {
           </div>
         </div>
         <div>
-          <hr className="hr" />
           {this.props.notificationData.resource ? 
             <div className="row p-2">
               <h6 className="notification-title">More Information</h6>

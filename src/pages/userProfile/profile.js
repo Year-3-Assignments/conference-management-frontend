@@ -9,6 +9,8 @@ let initialState = {
   userName: '',
   description: '',
   profileImage: '',
+  email: '',
+  phonenumber: '',
   isEditClicked: false,
   buttonText: 'edit profile'
 };
@@ -36,6 +38,8 @@ class Profile extends React.Component {
         lastName: nextProps.getuser.lastname,
         description: nextProps.getuser.description,
         userName: nextProps.getuser.username,
+        email: nextProps.getuser.email,
+        phonenumber: nextProps.getuser.phonenumber,
         profileImage: nextProps.getuser.imageurl
       });
     } 
@@ -56,19 +60,18 @@ class Profile extends React.Component {
       <div>
         <div className="profile">
           <div className="card">
-            <div>
-              <img src={this.state.profileImage} className="mb-3 profile-img" />
-              <div className="p-2">
-                <h5 className="m-0 name">{this.state.firstName}&nbsp;{this.state.lastName}</h5>
-                {!this.state.isEditClicked ?
-                  <p className="username mb-1">@{this.state.userName}</p> : 
-                  <input type="text" className="form-control mb-2 mt-2" id="name" name="userName" onChange={this.onChange} value={this.state.userName} />
-                }
-                {!this.state.isEditClicked ?
-                  <p className="user-description">{this.state.description}</p> :
-                  <textarea className="form-control mb-3" id="description" rows="2" name="description" onChange={this.onChange} value={this.state.description}></textarea>
-                }
-                <button className="btn btn-color btn-block" onClick={this.onEditClick}>{this.state.buttonText}</button>
+            <div className="row">
+              <div className="col-md-3">
+                <img src={this.state.profileImage} className="p-4 profile-img" />
+              </div>
+              <div className="col-md-9">
+                <div className="p-4">
+                  <h5 className="name">{this.state.firstName}&nbsp;{this.state.lastName}</h5>
+                  <p className="username">@{this.state.userName}</p>
+                  <p className="d-inline"><i className="fas fa-envelope"></i>&nbsp;&nbsp;{this.state.email}</p>&nbsp;&nbsp;&nbsp;&nbsp;
+                  <p className="d-inline"><i className="fas fa-phone"></i>&nbsp;&nbsp;{this.state.phonenumber}</p>
+                  <p className="user-description">{this.state.description}</p>
+                </div>
               </div>
             </div>
           </div>
