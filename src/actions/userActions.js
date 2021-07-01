@@ -72,7 +72,7 @@ export function updateUserAccount(user) {
 export function deleteUserAccount(user) {
   return {
     type: DELETE_USER_ACCOUNT,
-    payload: axios.put(`${process.env.REACT_APP_API_STG_URL}/api/user/delete`, user, {
+    payload: axios.put(`${process.env.REACT_APP_API_DEV_URL}/api/user/delete`, user, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -81,7 +81,7 @@ export function deleteUserAccount(user) {
 export function getUserNotifications() {
   return {
     type: GET_USER_NOTIFICATIONS,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/notifications`, {
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/notifications`, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -90,7 +90,7 @@ export function getUserNotifications() {
 export function makeNotificationArchive(notification) {
   return {
     type: MAKE_NOTIFICATION_ARCHIVE,
-    payload: axios.put(`${process.env.REACT_APP_API_STG_URL}/api/user/makearchive/${notification.id}`, null, {
+    payload: axios.put(`${process.env.REACT_APP_API_DEV_URL}/api/user/makearchive/${notification.id}`, null, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -99,7 +99,7 @@ export function makeNotificationArchive(notification) {
 export function approveChangeUserRole(roleData) {
   return {
     type: CHANGE_USER_ROLE,
-    payload: axios.put(`${process.env.REACT_APP_API_STG_URL}/api/user/approve`, roleData, {
+    payload: axios.put(`${process.env.REACT_APP_API_DEV_URL}/api/user/approve`, roleData, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -108,7 +108,7 @@ export function approveChangeUserRole(roleData) {
 export function rejectChangeUserRole(roleData) {
   return {
     type: CHANGE_USER_ROLE,
-    payload: axios.put(`${process.env.REACT_APP_API_STG_URL}/api/user/reject`, roleData, {
+    payload: axios.put(`${process.env.REACT_APP_API_DEV_URL}/api/user/reject`, roleData, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -117,7 +117,7 @@ export function rejectChangeUserRole(roleData) {
 export function requestChangeUserRole(roleData) {
   return {
     type: REQUEST_CHANGE_USER_ROLE,
-    payload: axios.post(`${process.env.REACT_APP_API_STG_URL}/api/user/requestrole`, roleData, {
+    payload: axios.post(`${process.env.REACT_APP_API_DEV_URL}/api/user/requestrole`, roleData, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -126,7 +126,7 @@ export function requestChangeUserRole(roleData) {
 export function getRequestUserRoles() {
   return {
     type: GET_REQUEST_USER_ROLES,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/getrequestroles`, {
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/getrequestroles`, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };

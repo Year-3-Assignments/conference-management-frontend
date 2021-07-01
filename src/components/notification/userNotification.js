@@ -3,6 +3,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import firebase from '../../firebase.config';
 import { makeNotificationArchive } from '../../actions/userActions';
+import { resourcePayment } from '../../actions/resourceActions';
 import './notification.scss';
 
 class UserNotification extends Component {
@@ -17,6 +18,16 @@ class UserNotification extends Component {
       }
       this.props.makeNotificationArchive(notification);
     }
+  }
+
+  makePayment(e, data) {
+    const paymentInfo = {
+      id: data.resource._id,
+      amount: data.amount,
+      notificationId: data._id
+    }
+    console.log(paymentInfo)
+    this.props.resourcePayment(paymentInfo);
   }
 
   render() {
@@ -111,10 +122,60 @@ class UserNotification extends Component {
         }
         {this.props.notificationData.payment && this.props.notificationData.payment === true ? 
           <div className="p-2">
-            <button className="btn btn-sm btn-success btn--pill">{`PAY LKR ${this.props.notificationData.amount}.00 NOW`}</button><br/>
+            <button className="btn btn-sm btn-success btn--pill" data-mdb-toggle="modal"
+              data-mdb-target="#payment-modal">{`PAY LKR ${this.props.notificationData.amount}.00 NOW`}
+            </button><br/>
             <small className="text-muted">
               <i>You need to pay LKR {this.props.notificationData.amount}.00 to send this resources to the editor</i>
             </small>
+            <div
+              className="modal fade"
+              id="payment-modal"
+              data-mdb-backdrop="static"
+              data-mdb-keyboard="false"
+              aria-hidden="true"
+            >
+              <div className="modal-dialog">
+                <div className="modal-content">
+                  <div className="modal-header">
+                    <h5 className="modal-title form-title" id="staticBackdropLabel">Pay for the Resource</h5>
+                    <button type="button" className="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div className="modal-body">
+                    <div className="row m-0 mb-2">
+                      <label htmlFor="email" className="form-label p-0 form-field">Email</label>
+                      <input type="text" id="email" className="form-control" name="email" value={this.props.notificationData.to.email} disabled />
+                    </div>
+                    <div className="row m-0 mb-2">
+                      <label htmlFor="name" className="form-label p-0 form-field">Name on the Card</label>
+                      <input type="text" id="name" className="form-control" name="name" />
+                    </div>
+                    <div className="row m-0 mb-2">
+                      <label htmlFor="card-number" className="form-label p-0 form-field">Credit Card Number</label>
+                      <input type="number" id="card-number" className="form-control" name="cardnumber" />
+                    </div>
+                    <div className="row mb-4">
+                      <div className="col-6">
+                        <label className="form-label form-field" htmlFor="experation">Expiration</label>
+                        <input type="text" id="experation" className="form-control" />
+                      </div>
+                      <div className="col-6">
+                        <label className="form-label form-field" htmlFor="formCVV">CVV</label>
+                        <input type="text" id="formCVV" className="form-control" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="modal-footer">
+                    <button type="button" className="btn btn-light btn--pill" data-mdb-dismiss="modal">
+                      Close
+                    </button>
+                    <button type="button" className="btn btn-success btn--pill" data-mdb-dismiss="modal" onClick={e => this.makePayment(e, this.props.notificationData)}>
+                      make payment
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         :
           null 
@@ -125,12 +186,15 @@ class UserNotification extends Component {
 }
 
 const mapStateToProps = state =>({
-
+  
 });
 
 const mapDispatchToProps = dispatch =>({
   makeNotificationArchive: (notification) => {
     dispatch(makeNotificationArchive(notification));
+  },
+  resourcePayment: (paymentData) => {
+    dispatch(resourcePayment(paymentData));
   }
 });
 export default connect(mapStateToProps,mapDispatchToProps)(UserNotification);

@@ -1,9 +1,10 @@
 import React from 'react';
 import './userProfilePage.scss';
 import {connect} from 'react-redux';
-import {getUserAccount} from '../../actions/userActions';
+import { getUserAccount, requestChangeUserRole } from '../../actions/userActions';
 
 let initialState = {
+  userId: '',
   firstName: '',
   lastName: '',
   userName: '',
@@ -12,6 +13,7 @@ let initialState = {
   email: '',
   phonenumber: '',
   isEditClicked: false,
+  isRoleRequested: false,
   buttonText: 'edit profile'
 };
 
@@ -34,15 +36,21 @@ class Profile extends React.Component {
     if(this.props.getuser !== nextProps.getuser){
       console.log("User Information", nextProps.getuser);
       this.setState({
+        userId: nextProps.getuser._id,
         firstName: nextProps.getuser.firstname,
         lastName: nextProps.getuser.lastname,
         description: nextProps.getuser.description,
         userName: nextProps.getuser.username,
         email: nextProps.getuser.email,
         phonenumber: nextProps.getuser.phonenumber,
+        isRoleRequested: nextProps.getuser.isrolerequested,
         profileImage: nextProps.getuser.imageurl
       });
-    } 
+    }
+    
+    if (this.props.changeuserrole !== nextProps.changeuserrole) {
+      this.props.getUserAccount();
+    }
   }
 
   onChange(e) {
@@ -53,6 +61,16 @@ class Profile extends React.Component {
     this.setState({ isEditClicked: !this.state.isEditClicked }, () => {
       this.setState({ buttonText: this.state.isEditClicked ? 'cancel': 'edit profile' })
     });
+  }
+
+  setRequestForReviewer(e) {
+    const requestData = {
+      requestedby: this.state.userId,
+      requestrole: 'ROLE_REVIEWER',
+      message: 'I want to change my role to reviewer.'
+    }
+    console.log(requestData);
+    this.props.requestChangeUserRole(requestData);
   }
 
   render() {
@@ -70,7 +88,14 @@ class Profile extends React.Component {
                   <p className="username">@{this.state.userName}</p>
                   <p className="d-inline"><i className="fas fa-envelope"></i>&nbsp;&nbsp;{this.state.email}</p>&nbsp;&nbsp;&nbsp;&nbsp;
                   <p className="d-inline"><i className="fas fa-phone"></i>&nbsp;&nbsp;{this.state.phonenumber}</p>
-                  <p className="user-description">{this.state.description}</p>
+                  <p className="user-description mb-2">{this.state.description}</p>
+                  {this.state.isRoleRequested === false ?
+                    <div>
+                      <button className="d-inline btn btn-sm btn--pill btn-outline-warning" onClick={e => this.setRequestForReviewer(e)}>request for reviewer</button>&nbsp;&nbsp;&nbsp;
+                      <button className="d-inline btn btn-sm btn--pill btn-outline-primary">request for editor</button>
+                    </div>
+                  :
+                    <button  className="btn btn-sm btn-outline-primary btn--pill"><i>your role request is under processing</i></button>}
                 </div>
               </div>
             </div>
@@ -83,12 +108,16 @@ class Profile extends React.Component {
 
 const mapStateToProps = state =>({
   getuser: state.userReducer.getuser,
+  changeuserrole: state.userReducer.requestchangeuserrole,
   getUserError: state.userReducer.getUserError
 });
 
 const mapDispatchToProps = dispatch =>({
   getUserAccount: () =>{
     dispatch(getUserAccount());
+  },
+  requestChangeUserRole: roleData => {
+    dispatch(requestChangeUserRole(roleData));
   }
 });
 
