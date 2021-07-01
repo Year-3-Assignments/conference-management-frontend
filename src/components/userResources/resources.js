@@ -39,7 +39,6 @@ class UserResources extends React.Component {
   }
 
   tableColumnData = [
-    { dataField: 'actions', text: 'Actions', formatter: this.buttonFormatter.bind(this), headerStyle: () => { return {width: '50px' }}},
     { dataField: '_id', text: 'Request ID', formatter: (cell) => this.setIdFormatter(cell)},
     { dataField: 'name', text: 'Name'},
     { dataField: 'type', text: 'Type', formatter: col => col.toUpperCase()},
@@ -58,6 +57,10 @@ class UserResources extends React.Component {
 
     if (_.isEqual(cell, 'APPROVED')) {
       return <span className="badge rounded-pill bg-success text-dark"><strong>APPROVED</strong></span>
+    }
+
+    if (_.isEqual(cell, 'REJECTED')) {
+      return <span className="badge rounded-pill bg-danger text-light"><strong>REJECTED</strong></span>
     }
   }
 
@@ -116,9 +119,8 @@ class UserResources extends React.Component {
   render() {
     return (
       <div className="container">
-        <h3 className="mt-5 payment-title">My Resources</h3>
         <div className="d-flex justify-content-end">
-          <button className="btn btn-info btn--pill float-end mb-4 resource-btn" data-mdb-toggle="modal" data-mdb-target="#create_resource">
+          <button className="btn btn-info btn--pill float-end mb-3 mt-3 resource-btn" data-mdb-toggle="modal" data-mdb-target="#create_resource">
             <span>
               <i className="fas fa-plus"></i>&nbsp;&nbsp;
               <span>New Resource</span>
@@ -126,6 +128,7 @@ class UserResources extends React.Component {
           </button>
         </div>
         <div className="card p-4">
+        <h3 className="payment-title">My Resources</h3>
           <BootstrapTable 
             keyField='_id' 
             data={ this.state.resources } 

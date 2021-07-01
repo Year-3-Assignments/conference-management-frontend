@@ -7,7 +7,6 @@
     "start": "node server.js",
     "postinstall": "webpack --mode production",
     "dev": "webpack serve --port 3000 --mode development --open --hot",
-    "test": "jest",
     "build": "webpack --mode production"
   },
   "author": "2021_REG_WE_14",
