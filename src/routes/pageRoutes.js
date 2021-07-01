@@ -14,6 +14,7 @@ import Editors from '../pages/admin/editors/editors';
 import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
 import HomePage from '../pages/home/homePage';
+import Editor from '../pages/editor/editor';
 
 function PageRoutes() {
   return (
@@ -24,7 +25,7 @@ function PageRoutes() {
           <Switch location={location}>
             <Route path="/signup" component={SignUp } key={location.pathname} exact />
             <Route path="/login" component={Login} key={location.pathname} exact />
-            <Route path="/me" component={UserProfilePage} key={location.pathname} />
+            <Route path="/me" component={UserProfilePage} key={location.pathname} exact />
             <Route path="/admin/dashboard" component={Dashboard} key={location.pathname} exact />
             <Route path="/admin/users" component={Users} key={location.pathname} exact />
             <Route path="/admin/reviewers" component={Reviewers} key={location.pathname} exact />
@@ -32,6 +33,7 @@ function PageRoutes() {
             <Route path="/admin/workshops" component={Workshops} key={location.pathname} exact />
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
             <Route path="/" component={HomePage} exact />
+            <Route path="/me/editor" component={Editor} exact />
           </Switch>
         </section>
         <Footer/>
