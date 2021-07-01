@@ -14,12 +14,10 @@ class UserProfilePage extends React.Component {
     return (
       <div className="container mt-2">
         <div className="row">
-          <div className="col-md-2">
-            <Profile />
-          </div>
-          <div className="col-md-10">
-            <UserResource />
-          </div>
+          <Profile />
+        </div>
+        <div className="row">
+          <UserResource />
         </div>
       </div>
     );

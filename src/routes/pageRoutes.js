@@ -14,6 +14,7 @@ import Editors from '../pages/admin/editors/editors';
 import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
 import HomePage from '../pages/home/homePage';
+import ReviewerPage from '../pages/reviewer/reviewer';
 
 function PageRoutes() {
   return (
@@ -23,6 +24,7 @@ function PageRoutes() {
         <section className="content">
           <Switch location={location}>
             <Route path="/signup" component={SignUp } key={location.pathname} exact />
+            <Route path="/reviewer" component={ReviewerPage} key={location.pathname} exact />
             <Route path="/login" component={Login} key={location.pathname} exact />
             <Route path="/me" component={UserProfilePage} key={location.pathname} />
             <Route path="/admin/dashboard" component={Dashboard} key={location.pathname} exact />

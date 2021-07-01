@@ -6,21 +6,21 @@ import { CREATE_USER_ACCOUNT, GET_USER_ACCOUNT, UPDATE_USER_ACCOUNT, DELETE_USER
 export function createUserAccount(user) {
   return {
     type: CREATE_USER_ACCOUNT,
-    payload: axios.post(`${process.env.REACT_APP_API_STG_URL}/api/user/create`, user)
+    payload: axios.post(`${process.env.REACT_APP_API_DEV_URL}/api/user/create`, user)
   };
 }
 
 export function loginUserAccount(user) {
   return {
     type: LOGIN_USER_ACCOUNT,
-    payload: axios.post(`${process.env.REACT_APP_API_STG_URL}/api/user/login`, user)
+    payload: axios.post(`${process.env.REACT_APP_API_DEV_URL}/api/user/login`, user)
   };
 }
 
 export function getUserAccount() {
   return {
     type: GET_USER_ACCOUNT,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/`, {
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/`, {
       headers: { 'Authorization': localStorage.getItem('token')}
     })
   };
@@ -29,14 +29,14 @@ export function getUserAccount() {
 export function getAllUsers() {
   return {
     type: GET_ALL_USER_ACCOUNTS,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/users`)
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/users`)
   };
 }
 
 export function getAllAdmins() {
   return {
     type: GET_ALL_ADMIN_ACCOUNTS,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/admins`, {
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/admins`, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -45,7 +45,7 @@ export function getAllAdmins() {
 export function getAllReviewers() {
   return {
     type: GET_ALL_REVIEWER_ACCOUNTS,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/reviewers`, {
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/reviewers`, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -54,7 +54,7 @@ export function getAllReviewers() {
 export function getAllEditors() {
   return {
     type: GET_ALL_EDITOR_ACCOUNTS,
-    payload: axios.get(`${process.env.REACT_APP_API_STG_URL}/api/user/editors`, {
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/user/editors`, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -63,7 +63,7 @@ export function getAllEditors() {
 export function updateUserAccount(user) {
   return {
     type: UPDATE_USER_ACCOUNT,
-    payload: axios.put(`${process.env.REACT_APP_API_STG_URL}/api/user/update`, user, {
+    payload: axios.put(`${process.env.REACT_APP_API_DEV_URL}/api/user/update`, user, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
