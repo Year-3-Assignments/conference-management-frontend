@@ -89,7 +89,7 @@ class CreateWorkshop extends Component{
           resource: this.props.data._id,
           amount: 250
         };
-
+        console.log(publishData);
         this.props.createWorkshop(publishData);
       } else {
         this.setState({ formNotValid: true}, () => {

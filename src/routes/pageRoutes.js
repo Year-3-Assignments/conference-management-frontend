@@ -37,7 +37,7 @@ function PageRoutes() {
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
             <Route path="/" component={HomePage} exact />
             <Route path="/home/workshop" component={workshopPage} exact/>
-            <Route path="/me/editor" component={Editor} exact />
+            <Route path="/me/editor" component={Editor} key={location.pathname} exact />
           </Switch>
         </section>
         <Footer/>

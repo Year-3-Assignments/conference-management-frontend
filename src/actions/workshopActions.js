@@ -62,7 +62,7 @@ export function changeWorkshopStatus(workshop) {
 export function getWorkshopsForHomePage(workshop){
   return{
     type: GET_WORKSHOPS_FOR_HOMEPAGE,
-    payload: axios.put(`${process.env.REACT_APP_API_STG_URL}/api/home/workshop`, workshop, {
+    payload: axios.put(`${process.env.REACT_APP_API_DEV_URL}/api/home/workshop`, workshop, {
       headers: { 'Authorization': localStorage.getItem('token') }
    })
   };

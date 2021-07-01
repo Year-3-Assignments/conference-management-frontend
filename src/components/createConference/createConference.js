@@ -93,6 +93,7 @@ class CreateConference extends Component{
           amount: 250
         };
 
+        console.log(publishData);
         this.props.createConference(publishData);
         NotificationManager.success('Publish data Successfully sent to Admin', 'Success');
       } else {
