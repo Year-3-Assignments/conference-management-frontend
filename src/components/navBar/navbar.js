@@ -73,7 +73,7 @@ class Navbar extends React.Component {
                         <a className="nav-link" href="#">Conferences</a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Workshops</a>
+                        <a className="nav-link" href="/home/workshop">Workshops</a>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="#">Downloads</a>

@@ -70,7 +70,7 @@ function resourceReducer(state = initialState, action) {
       getResource = action.payload.data;
       return { ...state, loading: false, getResource };
     case `${GET_EDITOR_RESOURCES}_FULFILLED`:
-      editorResources = action.payload.data;
+      editorResources = action.payload.data.data;
       return { ...state, loading: false, editorResources };
     case `${UPDATE_RESOURCE}_FULFILLED`:
       updateResource = action.payload.data;

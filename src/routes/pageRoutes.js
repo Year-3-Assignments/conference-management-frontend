@@ -14,6 +14,8 @@ import Editors from '../pages/admin/editors/editors';
 import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
 import HomePage from '../pages/home/homePage';
+import Editor from '../pages/editor/editor';
+import workshopPage from '../pages/home/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
 
 function PageRoutes() {
@@ -26,13 +28,15 @@ function PageRoutes() {
             <Route path="/signup" component={SignUp } key={location.pathname} exact />
             <Route path="/reviewer" component={ReviewerPage} key={location.pathname} exact />
             <Route path="/login" component={Login} key={location.pathname} exact />
-            <Route path="/me" component={UserProfilePage} key={location.pathname} />
+            <Route path="/me" component={UserProfilePage} key={location.pathname} exact />
             <Route path="/admin/dashboard" component={Dashboard} key={location.pathname} exact />
             <Route path="/admin/users" component={Users} key={location.pathname} exact />
             <Route path="/admin/reviewers" component={Reviewers} key={location.pathname} exact />
             <Route path="/admin/editors" component={Editors} key={location.pathname} exact />
             <Route path="/admin/workshops" component={Workshops} key={location.pathname} exact />
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
+            <Route path="/home/workshop" component={workshopPage} exact/>
+            <Route path="/me/editor" component={Editor} key={location.pathname} exact />
             <Route path="/" component={HomePage} exact />
           </Switch>
         </section>
