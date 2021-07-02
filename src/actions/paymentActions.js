@@ -4,7 +4,7 @@ import { CHARGE_AMOUNT, CHARGE_RESOURCE_AMOUNT,GET_PAYMENTS } from './index';
 export function chargeAmount(paymentInformation) {
   return {
     type: CHARGE_AMOUNT,
-    payload: axios.post(`${process.env.REACT_APP_API_DEV_URL}/api/payment/charge`, paymentInformation, {
+    payload: axios.post(`${process.env.REACT_APP_API_PRD_URL}/api/payment/charge`, paymentInformation, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -13,7 +13,7 @@ export function chargeAmount(paymentInformation) {
 export function chargeResourceAmount(paymentInformation) {
   return {
     type: CHARGE_RESOURCE_AMOUNT,
-    payload: axios.post(`${process.env.REACT_APP_API_DEV_URL}/api/payment/chargeResource`, paymentInformation, {
+    payload: axios.post(`${process.env.REACT_APP_API_PRD_URL}/api/payment/chargeResource`, paymentInformation, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
@@ -22,7 +22,7 @@ export function chargeResourceAmount(paymentInformation) {
 export function getPayments() {
   return {
     type: GET_PAYMENTS,
-    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/payment/payments`, {
+    payload: axios.get(`${process.env.REACT_APP_API_PRD_URL}/api/payment/payments`, {
       headers: { 'Authorization': localStorage.getItem('token') }
     })
   };
