@@ -27,6 +27,16 @@ class Reviewer extends Component {
   }
 
   componentDidMount() {
+    if (localStorage.getItem('role') !== 'ROLE_REVIEWER') {
+      if (localStorage.getItem('role') === 'ROLE_USER') {
+        window.location = '/me';
+      } else if (localStorage.getItem('role') === 'ROLE_EDITOR') {
+        window.location = '/me/editor';
+      } else if (localStorage.getItem('role') === 'ROLE_ADMIN') {
+        window.location = '/admin/dashboard';
+      }
+    }
+
     this.props.getAllResource();
   }
 

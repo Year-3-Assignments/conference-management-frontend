@@ -24,6 +24,16 @@ class Editor extends React.Component{
   }
 
   componentDidMount(){
+    if (localStorage.getItem('role') !== 'ROLE_EDITOR') {
+      if (localStorage.getItem('role') === 'ROLE_REVIEWER') {
+        window.location = '/reviewer';
+      } else if (localStorage.getItem('role') === 'ROLE_USER') {
+        window.location = '/me';
+      } else if (localStorage.getItem('role') === 'ROLE_ADMIN') {
+        window.location = '/admin/dashboard';
+      }
+    }
+
     if(!_.isNull(localStorage.getItem('token'))){
       this.props.getEditorResources();
     }

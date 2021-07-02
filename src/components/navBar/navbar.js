@@ -90,6 +90,12 @@ class Navbar extends React.Component {
                       <Link to="/admin/dashboard" className="nav-link">Dashboard</Link>
                     </li>
                     <li className="nav-item">
+                      <Link to="/admin/workshops" className="nav-link">Workshops</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/admin/conferences" className="nav-link">Conferences</Link>
+                    </li>
+                    <li className="nav-item">
                       <Link to="/admin/users" className="nav-link">Users</Link>
                     </li>
                     <li className="nav-item">
@@ -97,9 +103,6 @@ class Navbar extends React.Component {
                     </li>
                     <li className="nav-item">
                       <Link to="/admin/editors" className="nav-link">Editors</Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link to="/admin/workshops" className="nav-link">Workshops</Link>
                     </li>
                   </ul>
                 :

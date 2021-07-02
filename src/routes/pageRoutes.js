@@ -13,10 +13,11 @@ import Reviewers from '../pages/admin/reviewers/reviewers';
 import Editors from '../pages/admin/editors/editors';
 import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
-import HomePage from '../pages/home/homePage';
+import HomePage from '../pages/home/landingPage/homePage';
 import Editor from '../pages/editor/editor';
-import workshopPage from '../pages/home/workshopPage';
+import workshopPage from '../pages/home/workshopPage/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
+import Conferences from '../pages/admin/conferences/conferences';
 
 function PageRoutes() {
   return (
@@ -34,6 +35,7 @@ function PageRoutes() {
             <Route path="/admin/reviewers" component={Reviewers} key={location.pathname} exact />
             <Route path="/admin/editors" component={Editors} key={location.pathname} exact />
             <Route path="/admin/workshops" component={Workshops} key={location.pathname} exact />
+            <Route path="/admin/conferences" component={Conferences} key={location.pathname} exact />
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
             <Route path="/home/workshop" component={workshopPage} exact/>
             <Route path="/me/editor" component={Editor} key={location.pathname} exact />

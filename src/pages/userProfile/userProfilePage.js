@@ -10,6 +10,18 @@ class UserProfilePage extends React.Component {
     this.state = initialState;
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('role') !== 'ROLE_USER') {
+      if (localStorage.getItem('role') === 'ROLE_REVIEWER') {
+        window.location = '/reviewer';
+      } else if (localStorage.getItem('role') === 'ROLE_EDITOR') {
+        window.location = '/me/editor';
+      } else if (localStorage.getItem('role') === 'ROLE_ADMIN') {
+        window.location = '/admin/dashboard';
+      }
+    }
+  }
+
   render() {
     return (
       <div className="container mt-2">

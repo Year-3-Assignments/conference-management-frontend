@@ -1,0 +1,554 @@
+.conference-section {
+  background: url(https://firebasestorage.googleapis.com/v0/b/conference-management-storage.appspot.com/o/background.png?alt=media&token=0ee3df67-512a-46e3-be44-dd07ceeed757);
+  background-position: center;
+  height: 100vh;
+}
+
+.conference-description {
+  font-size: 23px;
+  text-align: center;
+  font-weight: 500;
+  margin-left: 450px;
+  margin-right: 450px;
+  color: #fff;
+}
+
+.conference-img {
+  width: 100vw;
+  height: 94vh;
+  max-height: fit-content;
+  position: relative;
+}
+
+.conference-resource-persons {
+  position: absolute; 
+  top: 20%; 
+}
+
+.conduct {
+  margin-top: 40px;
+}
+
+.conduct-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+}
+
+.conference-person-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+}
+
+.person-name {
+  color: #000;
+}
+
+.person-description {
+  margin-top: 25px;
+  margin-left: 80px;
+  margin-right: 80px;
+  color: #000;
+  font-size: 18px;
+}
+
+.person-phonenumber {
+  font-size: 25px;
+  color: #000;
+}
+
+.conduct-description {
+  color: #fff;
+  font-size: 25px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+
+.cover {
+  background: url(https://firebasestorage.googleapis.com/v0/b/conference-management-storage.appspot.com/o/background.png?alt=media&token=0ee3df67-512a-46e3-be44-dd07ceeed757);
+  color: #fff;
+}
+
+.description-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.button {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-us {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
+
+@media (min-width: 576px) {
+  .conference-title {
+    font-size: 100px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 130px;
+  }
+
+  .conference-place {
+    font-size: 60px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .conference-time {
+    font-size: 50px;
+    color: #fff;
+  }
+  
+  .about-conference-title {
+    color: #000;
+    font-weight: 600;
+    padding-top: 35px;
+  }
+
+  .about-conference-description {
+    font-size: 20px;
+    color: #000;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-top: 15px
+  }
+
+  .about-conference-date {
+    font-size: 25px;
+    color: #000;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 15px
+  }
+
+  .about-name-title {
+    color: #000;
+    margin-top: 20px;
+    font-size: 65px;
+  }
+
+  .about-douments {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .about-conterence-section {
+    height: 80vh;
+  }
+
+  .documents {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #167c7e;
+  }
+
+  .keynote-section {
+    background-color: #254e58;
+    color: #fff;
+  }
+
+  .keynote-person-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .keynote-person-name {
+    margin-top: 15px;
+    font-size: 32px;
+  }
+
+  .keynote-person-description {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 15px;
+  }
+
+  .keynote-title {
+    font-weight: 600;
+  }
+};
+
+@media (min-width: 768px) {
+  .conference-title {
+    font-size: 100px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 130px;
+  }
+
+  .conference-place {
+    font-size: 60px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .conference-time {
+    font-size: 50px;
+    color: #fff;
+  }
+  
+  .about-conference-title {
+    color: #000;
+    font-weight: 600;
+    padding-top: 35px;
+  }
+
+  .about-conference-description {
+    font-size: 23px;
+    color: #000;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-top: 15px
+  }
+
+  .about-conference-date {
+    font-size: 25px;
+    color: #000;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 15px
+  }
+
+  .about-name-title {
+    color: #000;
+    margin-top: 20px;
+    font-size: 65px;
+  }
+
+  .about-douments {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .about-conterence-section {
+    height: 80vh;
+  }
+
+  .documents {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #167c7e;
+  }
+
+  .keynote-section {
+    background-color: #254e58;
+    color: #fff;
+  }
+
+  .keynote-person-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .keynote-person-name {
+    margin-top: 15px;
+    font-size: 32px;
+  }
+
+  .keynote-person-description {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 15px;
+  }
+
+  .keynote-title {
+    font-weight: 600;
+  }
+};
+
+@media (min-width: 992px) {
+  .conference-title {
+    font-size: 130px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 220px;
+  }
+
+  .conference-place {
+    font-size: 60px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .conference-time {
+    font-size: 70px;
+    color: #fff;
+  }
+  
+  .about-conference-title {
+    color: #000;
+    font-weight: 600;
+    padding-top: 35px;
+  }
+
+  .about-conference-description {
+    font-size: 23px;
+    color: #000;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 15px
+  }
+
+  .about-conference-date {
+    font-size: 25px;
+    color: #000;
+    padding-right: 380px;
+    padding-left: 380px;
+    margin-top: 15px
+  }
+
+  .about-name-title {
+    color: #000;
+    margin-top: 20px;
+    font-size: 65px;
+  }
+
+  .about-douments {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .about-conterence-section {
+    height: 80vh;
+  }
+
+  .documents {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #167c7e;
+  }
+
+  .keynote-section {
+    background-color: #254e58;
+    color: #fff;
+  }
+
+  .keynote-person-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .keynote-person-name {
+    margin-top: 15px;
+    font-size: 32px;
+  }
+
+  .keynote-person-description {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 15px;
+  }
+
+  .keynote-title {
+    font-weight: 600;
+  }
+};
+
+@media (min-width: 1200px) {
+  .conference-title {
+    font-size: 130px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 220px;
+  }
+
+  .conference-place {
+    font-size: 60px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .conference-time {
+    font-size: 70px;
+    color: #fff;
+  }
+  
+  .about-conference-title {
+    color: #000;
+    font-weight: 600;
+    padding-top: 100px;
+  }
+
+  .about-conference-description {
+    font-size: 23px;
+    color: #000;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-top: 15px
+  }
+
+  .about-conference-date {
+    font-size: 25px;
+    color: #000;
+    padding-right: 380px;
+    padding-left: 380px;
+    margin-top: 15px
+  }
+
+  .about-name-title {
+    color: #000;
+    margin-top: 20px;
+    font-size: 65px;
+  }
+
+  .about-douments {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .about-conterence-section {
+    height: 80vh;
+  }
+
+  .documents {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #167c7e;
+  }
+
+  .keynote-section {
+    background-color: #254e58;
+    color: #fff;
+  }
+
+  .keynote-person-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .keynote-person-name {
+    margin-top: 15px;
+    font-size: 32px;
+  }
+
+  .keynote-person-description {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 18px;
+  }
+
+  .keynote-title {
+    font-weight: 600;
+  }
+};
+
+@media (min-width: 1400px) {
+  .conference-title {
+    font-size: 130px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 220px;
+  }
+
+  .conference-place {
+    font-size: 60px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .conference-time {
+    font-size: 70px;
+    color: #fff;
+  }
+  
+  .about-conference-title {
+    color: #000;
+    font-weight: 600;
+    padding-top: 70px;
+  }
+
+  .about-conference-description {
+    font-size: 23px;
+    color: #000;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-top: 15px
+  }
+
+  .about-conference-date {
+    font-size: 25px;
+    color: #000;
+    padding-right: 380px;
+    padding-left: 380px;
+    margin-top: 15px
+  }
+
+  .about-name-title {
+    color: #000;
+    margin-top: 20px;
+    font-size: 65px;
+  }
+
+  .about-douments {
+    color: #000;
+    font-size: 20px;
+  }
+
+  .about-conterence-section {
+    height: 80vh;
+  }
+
+  .documents {
+    margin-top: 0px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #167c7e;
+  }
+
+  .keynote-section {
+    background-color: #254e58;
+    color: #fff;
+  }
+
+  .keynote-person-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .keynote-person-name {
+    margin-top: 15px;
+    font-size: 32px;
+  }
+
+  .keynote-person-description {
+    margin-left: 150px;
+    margin-right: 150px;
+    font-size: 18px;
+  }
+
+  .keynote-title {
+    font-weight: 600;
+  }
+};

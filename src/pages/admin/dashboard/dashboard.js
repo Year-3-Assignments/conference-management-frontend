@@ -13,6 +13,18 @@ class DashBoard extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    if (localStorage.getItem('role') !== 'ROLE_ADMIN') {
+      if (localStorage.getItem('role') === 'ROLE_REVIEWER') {
+        window.location = '/reviewer';
+      } else if (localStorage.getItem('role') === 'ROLE_EDITOR') {
+        window.location = '/me/editor';
+      } else if (localStorage.getItem('role') === 'ROLE_USER') {
+        window.location = '/me';
+      }
+    }
+  }
+
   render() {
     return (
       <div className="container p-4">
