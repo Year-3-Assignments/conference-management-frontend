@@ -38,7 +38,7 @@ class Login extends React.Component{
         } else if (localStorage.getItem('role') === 'ROLE_USER') {
           window.location = '/me'
         } else if (localStorage.getItem('role') === 'ROLE_EDITOR') {
-          window.location = '/editor'
+          window.location = '/me/editor'
         } else if (localStorage.getItem('role') === 'ROLE_REVIEWER') {
           window.location = '/reviewer'
         }
