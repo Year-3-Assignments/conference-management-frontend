@@ -18,9 +18,7 @@ class KeyNotePage extends Component {
 
   componentWillReceiveProps = nextProps => {
     if (this.props.homepageconference !== nextProps.homepageconference) {
-      this.setState({ conference: nextProps.homepageconference }, () => {
-        console.log('dddd', this.state.conference)
-      });
+      this.setState({ conference: nextProps.homepageconference });
     }
   }
 
@@ -35,7 +33,7 @@ class KeyNotePage extends Component {
           {this.props.homepageconference && this.props.homepageconference[0].resource &&
             this.props.homepageconference[0].resource.resourcepersons && 
             this.props.homepageconference[0].resource.resourcepersons.map((person, index) => (
-              <div key={index}>
+              <div key={person._id}>
                 <KeyNotePerson person={person} />
               </div>
             ))}

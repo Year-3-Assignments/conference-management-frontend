@@ -70,10 +70,10 @@ class Navbar extends React.Component {
                         <Link to="/keynotes" className="nav-link">Keynotes</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Conferences</a>
+                        <Link to="/conferences" className="nav-link">Conferences</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="/home/workshop">Workshops</a>
+                        <Link to="/workshops" className="nav-link">Workshops</Link>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="#">Downloads</a>
