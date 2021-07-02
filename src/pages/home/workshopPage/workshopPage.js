@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getWorkshopsForHomePage } from '../../actions/workshopActions';
-import './homePage.scss'
+import { getWorkshopsForHomePage } from '../../../actions/workshopActions';
 
 class WorkshopHomePage extends Component {
   constructor(props) {

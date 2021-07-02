@@ -13,9 +13,9 @@ import Reviewers from '../pages/admin/reviewers/reviewers';
 import Editors from '../pages/admin/editors/editors';
 import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
-import HomePage from '../pages/home/homePage';
+import HomePage from '../pages/home/landingPage/homePage';
 import Editor from '../pages/editor/editor';
-import workshopPage from '../pages/home/workshopPage';
+import workshopPage from '../pages/home/workshopPage/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
 import Conferences from '../pages/admin/conferences/conferences';
 

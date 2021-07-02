@@ -1,11 +1,13 @@
 import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE, UPDATE_CONFERENCE, 
-  DELETE_CONFERENCE, GET_CONFERENCES_FOR_ADMIN, SET_CONFERENCE_STATUS, GET_CONFERENCE_FOR_HOME_PAGE } from '../actions/index';
+  DELETE_CONFERENCE, GET_CONFERENCES_FOR_ADMIN, SET_CONFERENCE_STATUS, GET_CONFERENCE_FOR_HOME_PAGE,
+  GET_APPROVED_CONFERENCES } from '../actions/index';
 
   const initialState = {
     createconference: '',
     getconferences: [],
     homepageconference: '',
     getconference: '',
+    approvedconferences: [],
     setconference: '',
     updateconference: '',
     deleteconference: '',
@@ -18,12 +20,13 @@ import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE,
     deleteconferenceError: null,
     getadminconferencesError: null,
     setconferencestatusError: null,
-    homepageconferenceError: null
+    homepageconferenceError: null,
+    approvedconferencesError: null
   };
 
   function conferenceReducer(state = initialState, action) {
     let createconference, getconferences, getconference, setconference, updateconference, deleteconference,
-      getadminconferences, setconferencestatus, homepageconference;
+      getadminconferences, setconferencestatus, homepageconference, approvedconferences;
     
     switch (action.type) {
       case `${CREATE_CONFERENCE}_PENDING`:
@@ -34,6 +37,7 @@ import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE,
       case `${GET_CONFERENCES_FOR_ADMIN}_PENDING`:
       case `${SET_CONFERENCE_STATUS}_PENDING`:
       case `${GET_CONFERENCE_FOR_HOME_PAGE}_PENDING`:
+      case `${GET_APPROVED_CONFERENCES}_PENDING`:
         return { ...state, loading: true, 
           createconferenceError: null,
           getconferencesError: null,
@@ -42,7 +46,8 @@ import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE,
           deleteconferenceError: null,
           getadminconferencesError: null,
           setconferencestatusError: null,
-          homepageconferenceError: null
+          homepageconferenceError: null,
+          approvedconferencesError: null
         };
     
       case `${CREATE_CONFERENCE}_FULFILLED`:
@@ -72,6 +77,9 @@ import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE,
       case `${GET_CONFERENCE_FOR_HOME_PAGE}_FULFILLED`:
         homepageconference = action.payload.data;
         return { ...state, loading: false, homepageconference };
+      case `${GET_APPROVED_CONFERENCES}_FULFILLED`:
+        approvedconferences = action.payload.data;
+        return { ...state, loading: false, approvedconferences };
 
       case `${CREATE_CONFERENCE}_REJECTED`:
         return { ...state, loading: false, createconferenceError: action.payload.data, state: initialState };
@@ -89,6 +97,8 @@ import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE,
         return { ...state, loading: false, setconferencestatusError: action.payload.data, state: initialState };
       case `${GET_CONFERENCE_FOR_HOME_PAGE}_REJECTED`:
         return { ...state, loading: false, homepageconferenceError: action.payload.data, state: initialState };
+      case `${GET_APPROVED_CONFERENCES}_REJECTED`:
+        return { ...state, loading: false, approvedconferencesError: action.payload.data, state: initialState };
       
       default:
         return state;

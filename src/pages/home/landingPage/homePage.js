@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Conference from './conference';
+import AbouteConference from './aboutConference';
+import KeyNoteSpeakers from './keynoteSpeakers';
+import UpcommingConference from './upcommingConference';
 
 class HomePage extends Component {
   constructor(props) {
@@ -11,6 +14,9 @@ class HomePage extends Component {
     return (
       <div>
         <Conference />
+        <AbouteConference />
+        <KeyNoteSpeakers />
+        <UpcommingConference />
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { CREATE_CONFERENCE, GET_ALL_CONFERENCES, GET_CONFERENCE, SET_CONFERENCE, UPDATE_CONFERENCE, 
-  DELETE_CONFERENCE, GET_CONFERENCES_FOR_ADMIN, SET_CONFERENCE_STATUS, GET_CONFERENCE_FOR_HOME_PAGE } from './index';
+  DELETE_CONFERENCE, GET_CONFERENCES_FOR_ADMIN, SET_CONFERENCE_STATUS, GET_CONFERENCE_FOR_HOME_PAGE,
+  GET_APPROVED_CONFERENCES } from './index';
 
 export function createConference(conference) {
   return {
@@ -73,4 +74,11 @@ export function getConferenceForHomePage() {
     type: GET_CONFERENCE_FOR_HOME_PAGE,
     payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/conference/conference/home`)
   }
+}
+
+export function getApprovedConferences() {
+  return {
+    type: GET_APPROVED_CONFERENCES,
+    payload: axios.get(`${process.env.REACT_APP_API_DEV_URL}/api/conference/approve/conference`)
+  };
 }

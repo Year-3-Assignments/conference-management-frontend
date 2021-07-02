@@ -1,0 +1,89 @@
+@media (min-width: 576px) {};
+
+@media (min-width: 768px) {
+  .event-img {
+    width: fit-content;
+    height: 250px;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .card-title {
+    font-size: 25px;
+    color: #000;
+  }
+
+  .resource-person-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+};
+
+@media (min-width: 992px) {
+  .event-img {
+    width: fit-content;
+    height: 210px;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .card-title {
+    font-size: 25px;
+    color: #000;
+  }
+
+  .resource-person-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+};
+
+@media (min-width: 1200px) {
+  .event-img {
+    width: fit-content;
+    height: 250px;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .card-title {
+    font-size: 25px;
+    color: #000;
+  }
+
+  .resource-person-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+};
+
+@media (min-width: 1400px) {
+  .event-img {
+    width: fit-content;
+    height: 250px;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+
+  .card-title {
+    font-size: 25px;
+    color: #000;
+  }
+
+  .resource-person-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+  }
+};
