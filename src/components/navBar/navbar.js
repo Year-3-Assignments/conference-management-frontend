@@ -64,10 +64,10 @@ class Navbar extends React.Component {
                   <span className="nav-content">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Home</a>
+                        <Link to="/" className="nav-link">Home</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#">Keynotes</a>
+                        <Link to="/keynotes" className="nav-link">Keynotes</Link>
                       </li>
                       <li className="nav-item">
                         <a className="nav-link" href="#">Conferences</a>

@@ -18,6 +18,7 @@ import Editor from '../pages/editor/editor';
 import workshopPage from '../pages/home/workshopPage/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
 import Conferences from '../pages/admin/conferences/conferences';
+import KeynotePage from '../pages/home/keynotePage/keynotepage';
 
 function PageRoutes() {
   return (
@@ -38,6 +39,7 @@ function PageRoutes() {
             <Route path="/admin/conferences" component={Conferences} key={location.pathname} exact />
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
             <Route path="/home/workshop" component={workshopPage} exact/>
+            <Route path="/keynotes" component={KeynotePage} key={location.pathname} exact />
             <Route path="/me/editor" component={Editor} key={location.pathname} exact />
             <Route path="/" component={HomePage} exact />
           </Switch>
