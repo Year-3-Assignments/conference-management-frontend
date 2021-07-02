@@ -19,7 +19,7 @@ const initialState = {
 };
 
 function workshopReducer(state = initialState,action){
-  let createWorkshop, allWorkshops, getWorkshop, setWorkshop, updateWorkshop, deleteWorkshop, changeworkshopstatus,homepageworkshop;
+  let createWorkshop, allWorkshops, getWorkshop, setWorkshop, updateWorkshop, deleteWorkshop, changeworkshopstatus,getWorkshopsForHomepage;
 
   switch(action.type){
     case `${CREATE_WORKSHOP}_PENDING`:
@@ -61,8 +61,8 @@ function workshopReducer(state = initialState,action){
       changeworkshopstatus = action.payload.data;
       return{...state, loading:false , changeworkshopstatus};
     case  `${GET_WORKSHOPS_FOR_HOMEPAGE}_FULFILLED`:
-      homepageworkshop = action.payload.data;
-      return{...state, loading:false , homepageworkshop};
+      getWorkshopsForHomepage = action.payload.data;
+      return{...state, loading:false , getWorkshopsForHomepage};
 
     case `${CREATE_WORKSHOP}_REJECTED`:
       return { ...state, loading: false, createWorkshopError: action.payload.data, state: initialState };

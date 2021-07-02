@@ -22,13 +22,25 @@
 
 @media (min-width: 1200px) {
   .nav-content {
-    margin-left: 180px;
+    margin-left: 300px;
     margin-right: auto;
   }
 }
 
 @media (min-width: 1400px) {
   .nav-content {
-    margin-left: 700px;
+    margin-left: 600px;
+  }
+};
+
+@media (min-width: 1500px) {
+  .nav-content {
+    margin-left: 410px;
+  }
+};
+
+@media (min-width: 1800px) {
+  .nav-content {
+    margin-left: 600px;
   }
 };
