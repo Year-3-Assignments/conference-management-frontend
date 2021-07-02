@@ -43,6 +43,7 @@ class CreateConference extends Component{
   setImageUrl = ({image}) => {
     this.setState({ image: image});
   }
+  
   setUploadPercentage = (progress) => {
     this.setState({ uploadPercentage: progress });
   }

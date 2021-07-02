@@ -15,7 +15,7 @@ import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
 import HomePage from '../pages/home/homePage';
 import Editor from '../pages/editor/editor';
-import workshopPage from '../pages/home/workshopPage';
+import WorkshopPage from '../pages/home/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
 
 function PageRoutes() {
@@ -35,7 +35,7 @@ function PageRoutes() {
             <Route path="/admin/editors" component={Editors} key={location.pathname} exact />
             <Route path="/admin/workshops" component={Workshops} key={location.pathname} exact />
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
-            <Route path="/home/workshop" component={workshopPage} exact/>
+            <Route path="/home/workshop" component={WorkshopPage} key={location.pathname} exact/>
             <Route path="/me/editor" component={Editor} key={location.pathname} exact />
             <Route path="/" component={HomePage} exact />
           </Switch>
