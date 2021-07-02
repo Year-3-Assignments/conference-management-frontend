@@ -32,13 +32,22 @@ class UserPayments extends Component {
           <div>
             {this.state.paymentDetails.slice(0, 5).map((payment, index) => (
               <div key={index}>
-                <Payment 
-                  image={payment.attendee.imageurl} 
+                {payment.user ?
+                  <Payment 
+                  image={ payment.user.imageurl} 
+                  firstName={payment.user.firstname}
+                  lastName={payment.user.lastname}
+                  amount={payment.amount}
+                  date={payment.createdAt}
+                />: null}
+                {payment.attendee ?
+                  <Payment 
+                  image={ payment.attendee.imageurl} 
                   firstName={payment.attendee.firstname}
                   lastName={payment.attendee.lastname}
                   amount={payment.amount}
                   date={payment.createdAt}
-                />
+                />: null}
               </div>
             ))}
           </div>

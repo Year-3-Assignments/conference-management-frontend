@@ -144,9 +144,6 @@ class CreateResource extends React.Component{
         
         this.props.createResource(resource);
         NotificationManager.success('New Resource is created');
-        this.setState(initialState);
-        $('#files').val('');
-        $('[name=resourceType]').removeAttr('checked');
       }else{
         this.setState({ isFormInvalid: true});
         NotificationManager.warning('Please fill the input fields!')

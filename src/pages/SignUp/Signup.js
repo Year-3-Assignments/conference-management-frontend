@@ -79,8 +79,8 @@ class Signup extends Component {
             console.log(error);
           }, () => {
             upload.snapshot.ref.getDownloadURL().then((url) => {
-              console.log(url);
               this.setImageUrl({ imageUrl: url });
+              NotificationManager.success('Image upload success');
             });
           });
         }
