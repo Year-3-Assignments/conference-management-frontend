@@ -17,6 +17,7 @@ import HomePage from '../pages/home/homePage';
 import Editor from '../pages/editor/editor';
 import workshopPage from '../pages/home/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
+import Conferences from '../pages/admin/conferences/conferences';
 
 function PageRoutes() {
   return (
@@ -34,6 +35,7 @@ function PageRoutes() {
             <Route path="/admin/reviewers" component={Reviewers} key={location.pathname} exact />
             <Route path="/admin/editors" component={Editors} key={location.pathname} exact />
             <Route path="/admin/workshops" component={Workshops} key={location.pathname} exact />
+            <Route path="/admin/conferences" component={Conferences} key={location.pathname} exact />
             <Route path="/notifications" component={UserNotifications} key={location.pathname} exact />
             <Route path="/home/workshop" component={workshopPage} exact/>
             <Route path="/me/editor" component={Editor} key={location.pathname} exact />
