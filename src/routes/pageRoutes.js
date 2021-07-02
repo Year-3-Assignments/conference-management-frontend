@@ -15,7 +15,7 @@ import UserNotifications from '../pages/notifications/userNotifications';
 import Workshops from '../pages/admin/workshops/workshops';
 import HomePage from '../pages/home/homePage';
 import Editor from '../pages/editor/editor';
-import WorkshopPage from '../pages/home/workshopPage';
+import WorkshopPage from '../pages/home/workshopPage/workshopPage';
 import ReviewerPage from '../pages/reviewer/reviewer';
 
 function PageRoutes() {

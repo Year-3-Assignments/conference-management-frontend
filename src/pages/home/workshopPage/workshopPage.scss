@@ -1,0 +1,113 @@
+.workshop-title {
+  font-size: 100px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 60px;
+}
+
+.workshop-section {
+  background: url(https://firebasestorage.googleapis.com/v0/b/conference-management-storage.appspot.com/o/background.png?alt=media&token=0ee3df67-512a-46e3-be44-dd07ceeed757);
+  background-position: center;
+  height: 70vh;
+  color: #fff; 
+}
+
+.workshop-description {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(7, 7, 7);
+}
+
+.workshop-img {
+  width: 100vw;
+  height: 94vh;
+  max-height: fit-content;
+  position: relative;
+}
+
+.workshop-resource-persons {
+  position: absolute; 
+  top: 20%; 
+}
+
+.workshop-place {
+  font-size: 12px;
+  color: rgb(7, 7, 7);
+}
+
+.workshop-time {
+  font-size: 12px;
+  color: rgb(7, 7, 7);
+}
+
+.conduct {
+  margin-top: 40px;
+}
+
+.conduct-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+}
+
+.workshop-person-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+}
+
+.workshop-person-name {
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.person-description {
+  margin-top: 25px;
+  margin-left: 80px;
+  margin-right: 80px;
+  color: #000;
+  font-size: 18px;
+}
+
+.person-phonenumber {
+  font-size: 25px;
+  color: #000;
+}
+
+.conduct-description {
+  color: #fff;
+  font-size: 25px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+
+.cover {
+  background: url(https://firebasestorage.googleapis.com/v0/b/conference-management-storage.appspot.com/o/background.png?alt=media&token=0ee3df67-512a-46e3-be44-dd07ceeed757);
+  color: #fff;
+}
+
+.description-title {
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+  padding-top: 50px;
+}
+
+.button {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contact-us {
+  font-size: 20px;
+  color: #000;
+  font-weight: 600;
+}
