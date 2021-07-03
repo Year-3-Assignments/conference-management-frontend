@@ -43,6 +43,14 @@ class Editor extends React.Component{
     if (this.props.editorResources !== nextProps.editorResources) {
       this.setState({ resources: nextProps.editorResources });
     }
+
+    if (this.props.createconference !== nextProps.createconference) {
+      this.props.getEditorResources();
+    }
+
+    if (this.props.createworkshop !== nextProps.createworkshop) {
+      this.props.getEditorResources();
+    }
   }
 
   tableColumnData = [
@@ -164,6 +172,8 @@ class Editor extends React.Component{
 
 const mapStateToProps = state =>({
   editorResources: state.resourceReducer.editorResources,
+  createconference: state.conferenceReducer.createconference,
+  createworkshop: state.workshopReducer.createWorkshop
 });
 
 const mapDispatchToProps = dispatch =>({
