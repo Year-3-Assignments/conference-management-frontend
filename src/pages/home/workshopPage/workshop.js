@@ -17,7 +17,7 @@ class Workshop extends Component {
         <div className="row mt-4">
           {this.props.workshop.resource && this.props.workshop.resource.resourcepersons &&
             this.props.workshop.resource.resourcepersons.map((person, index) => (
-              <div className="col-md-4 col-sm-6 text-center">
+              <div className="col-md-3 col-sm-6 text-center">
                 <img src={person.imageurl} className="workshop-person-img" />
                 <p className="workshop-person-name">{person.firstname}&nbsp;&nbsp;{person.lastname}</p>
                 <p className="workshop-person-data">{person.email}</p>

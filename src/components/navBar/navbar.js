@@ -112,10 +112,7 @@ class Navbar extends React.Component {
                 {localStorage.getItem('role') === 'ROLE_REVIEWER' ?
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                      <a className="nav-link" href="#">Resources</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">Users</a>
+                      <Link className="nav-link" to="/reviewer">Resources</Link>
                     </li>
                   </ul>
                 :
@@ -125,10 +122,7 @@ class Navbar extends React.Component {
                 {localStorage.getItem('role') === 'ROLE_EDITOR' ?
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                      <a className="nav-link" href="#">My Edits</a>
-                    </li>
-                    <li className="nav-item">
-                      <a className="nav-link" href="#">Resources</a>
+                      <Link className="nav-link" to="/me/editor">My Edits</Link>
                     </li>
                   </ul>
                 :

@@ -70,7 +70,7 @@ class UserNotification extends Component {
               <div className="col-md-6">
                 {this.props.notificationData.resource.resourceurls && this.props.notificationData.resource.resourceurls.length > 0 ? 
                   <div>
-                    <h6 className="resource-title">Approved Documents</h6>
+                    <h6 className="resource-custom-title">Approved Documents</h6>
                     {this.props.notificationData.resource.resourceurls.map((item, index) => (
                       <div key={index}> 
                         <i className="fas fa-file-alt"></i>&nbsp;
